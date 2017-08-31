@@ -252,7 +252,7 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hff-5R-IM1">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hff-5R-IM1" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="62.5" y="286" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -333,6 +333,7 @@
                                 </state>
                                 <connections>
                                     <action selector="createAccountBtnPressed:" destination="gFP-cf-5dV" eventType="touchUpInside" id="wbL-bK-he7"/>
+                                    <action selector="pickAvatarPressed:" destination="q6t-3H-cu1" eventType="touchUpInside" id="Jn1-7r-vWn"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="oKf-rQ-Eh7">
@@ -362,7 +363,7 @@
                                         </constraints>
                                         <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yiy-09-Lwu">
                                         <rect key="frame" x="0.0" y="84" width="250" height="2"/>
@@ -392,7 +393,7 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNq-xv-00F">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNq-xv-00F" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="62" y="597" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -403,6 +404,9 @@
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccountPressed:" destination="q6t-3H-cu1" eventType="touchUpInside" id="pl5-oG-glJ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYL-Lg-CVt">
                                 <rect key="frame" x="104.5" y="60" width="167" height="23"/>
@@ -429,6 +433,7 @@
                                 </state>
                                 <connections>
                                     <action selector="createAccountBtnPressed:" destination="gFP-cf-5dV" eventType="touchUpInside" id="Qcx-Yn-dk3"/>
+                                    <action selector="pickBGColorPressed:" destination="q6t-3H-cu1" eventType="touchUpInside" id="rUm-ay-4Ww"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -453,6 +458,10 @@
                         <viewLayoutGuide key="safeArea" id="2go-J4-9AT"/>
                     </view>
                     <connections>
+                        <outlet property="emailTxt" destination="Ige-fb-T5W" id="NVg-tQ-tJp"/>
+                        <outlet property="passwordTxt" destination="Zkh-bu-0J1" id="yaQ-Lx-KhO"/>
+                        <outlet property="userImg" destination="4Sq-CZ-Dlm" id="ERr-RO-80x"/>
+                        <outlet property="usernameTxt" destination="FMG-SJ-Ptp" id="Uhj-L1-M4l"/>
                         <segue destination="vdg-hP-v3h" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="xau-En-JjB"/>
                     </connections>
                 </viewController>
