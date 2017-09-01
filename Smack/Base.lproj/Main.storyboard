@@ -13,6 +13,7 @@
         <array key="HelveticaNeue.ttc">
             <string>HelveticaNeue</string>
             <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue-Medium</string>
         </array>
     </customFonts>
     <scenes>
@@ -217,7 +218,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="6Yw-YT-yQo">
                                 <rect key="frame" x="62.5" y="160" width="250" height="86"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lvO-ck-qHf">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lvO-ck-qHf">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="zyJ-tE-B80"/>
@@ -264,6 +265,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginPressed:" destination="gFP-cf-5dV" eventType="touchUpInside" id="0vk-zp-yhX"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ddv-Ek-ifj">
                                 <rect key="frame" x="126.5" y="80" width="122.5" height="40"/>
@@ -283,12 +287,26 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="xhK-1C-Fo2">
+                                <rect key="frame" x="169" y="215" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid email or password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wn8-6K-xhv">
+                                <rect key="frame" x="52" y="124" width="271.5" height="27.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="23"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6Yw-YT-yQo" firstAttribute="top" secondItem="ddv-Ek-ifj" secondAttribute="bottom" constant="40" id="4Ye-2B-pUY"/>
+                            <constraint firstItem="xhK-1C-Fo2" firstAttribute="centerY" secondItem="bbK-ik-Xn6" secondAttribute="centerY" constant="-100" id="5pk-ey-cao"/>
                             <constraint firstItem="Hff-5R-IM1" firstAttribute="top" secondItem="6Yw-YT-yQo" secondAttribute="bottom" constant="40" id="65b-0x-laz"/>
+                            <constraint firstItem="wn8-6K-xhv" firstAttribute="centerX" secondItem="bbK-ik-Xn6" secondAttribute="centerX" id="LIf-fS-7xf"/>
                             <constraint firstItem="vPR-N0-B8Q" firstAttribute="top" secondItem="Hff-5R-IM1" secondAttribute="bottom" id="Lp4-Ut-oZD"/>
+                            <constraint firstItem="wn8-6K-xhv" firstAttribute="top" secondItem="ddv-Ek-ifj" secondAttribute="bottom" constant="4" id="Lqe-N4-dJt"/>
+                            <constraint firstItem="xhK-1C-Fo2" firstAttribute="centerX" secondItem="bbK-ik-Xn6" secondAttribute="centerX" id="NA3-2g-zId"/>
                             <constraint firstItem="Hff-5R-IM1" firstAttribute="centerX" secondItem="bbK-ik-Xn6" secondAttribute="centerX" id="PFl-oG-tdD"/>
                             <constraint firstItem="ddv-Ek-ifj" firstAttribute="centerX" secondItem="bbK-ik-Xn6" secondAttribute="centerX" id="Qld-Om-ebV"/>
                             <constraint firstItem="ddv-Ek-ifj" firstAttribute="top" secondItem="S8a-Vi-7fF" secondAttribute="top" constant="60" id="RN5-F7-jKx"/>
@@ -300,6 +318,10 @@
                         <viewLayoutGuide key="safeArea" id="S8a-Vi-7fF"/>
                     </view>
                     <connections>
+                        <outlet property="emailTxt" destination="lvO-ck-qHf" id="cOv-9y-99j"/>
+                        <outlet property="invalidTxt" destination="wn8-6K-xhv" id="hlX-xM-SpW"/>
+                        <outlet property="passText" destination="K7m-41-tNz" id="z2y-Aw-UeM"/>
+                        <outlet property="spinner" destination="xhK-1C-Fo2" id="QQV-35-s3X"/>
                         <segue destination="q6t-3H-cu1" kind="show" identifier="toCreateAccount" id="Xt6-op-EYc"/>
                     </connections>
                 </viewController>
