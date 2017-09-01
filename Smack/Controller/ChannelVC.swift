@@ -12,7 +12,13 @@ class ChannelVC: UIViewController {
     @IBOutlet weak var userImg: CircleImage!
     
     @IBAction func loginButtonPressed(_ sender: Any) {
+        if AuthService.instance.isLoggedIn {
+            let profile = ProfileVC()
+            profile.modalPresentationStyle = .custom
+            present(profile, animated: true, completion: nil)
+        } else {
         performSegue(withIdentifier: TO_LOGIN, sender: nil)
+        }
     }
     @IBOutlet weak var loginBtn: UIButton!
     
