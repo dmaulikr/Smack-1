@@ -29,6 +29,7 @@
 		C56832971F5896E0000F13D1 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56832961F5896E0000F13D1 /* CreateAccountVC.swift */; };
 		C56C0D6D1F59EED30027BA2C /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56C0D6C1F59EED30027BA2C /* MessageService.swift */; };
 		C56C0D6F1F59EF060027BA2C /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56C0D6E1F59EF060027BA2C /* Channel.swift */; };
+		C56C0D711F59F3CF0027BA2C /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56C0D701F59F3CF0027BA2C /* ChannelCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		C56832961F5896E0000F13D1 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		C56C0D6C1F59EED30027BA2C /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		C56C0D6E1F59EF060027BA2C /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		C56C0D701F59F3CF0027BA2C /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
 		E75438FD762229E576EFD06E /* Pods_Smack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFCBCF3C8C1BDC178B193D78 /* Pods-Smack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,6 +164,7 @@
 				C51BF5ED1F58AEF000DC128A /* RoundedButton.swift */,
 				C51BF5F31F59022200DC128A /* AvatarCell.swift */,
 				C51BF5F51F590EC300DC128A /* CircleImage.swift */,
+				C56C0D701F59F3CF0027BA2C /* ChannelCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C51BF5F91F59325200DC128A /* ProfileVC.swift in Sources */,
+				C56C0D711F59F3CF0027BA2C /* ChannelCell.swift in Sources */,
 				C568328E1F588112000F13D1 /* SWRevealViewController.m in Sources */,
 				C51BF5F21F5900BE00DC128A /* AvatarPickerVC.swift in Sources */,
 				C51BF5EE1F58AEF000DC128A /* RoundedButton.swift in Sources */,
